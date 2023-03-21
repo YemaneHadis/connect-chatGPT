@@ -23,6 +23,10 @@ const openai = new OpenAIApi(configuration);
 
 const port = process.env.PORT || 5001;
 
+app.get("/", async (req,res) =>{
+  console.log("this is the message");
+})
+
 app.post("/ask", async (req, res) => {
   let prompt = req.body.prompt;
 
